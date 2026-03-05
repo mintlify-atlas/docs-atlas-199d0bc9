@@ -195,7 +195,7 @@ main:
     
     ; Get increment amount (default to 1)
     LOADI R2, 1              ; default increment
-    ; TODO: Read from calldata when implemented
+    ; Note: Calldata reading would require additional opcodes
     
     ; Increment counter
     ADD R1, R1, R2           ; R1 = counter + increment

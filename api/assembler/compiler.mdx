@@ -12,6 +12,55 @@ The compiler module converts an Abstract Syntax Tree (AST) into executable bytec
 
 This approach allows forward references where labels can be used before they are defined.
 
+## Public API
+
+### assemble
+
+```rust
+pub fn assemble(source: &str) -> Result<Vec<u8>>
+```
+
+Main entry point for assembling source code into bytecode. This function performs lexing, parsing, and compilation in a single call.
+
+<ParamField path="source" type="&str" required>
+  Assembly source code as a string
+</ParamField>
+
+<ResponseField name="Result" type="Result<Vec<u8>>">
+  Compiled bytecode or an error if assembly fails
+</ResponseField>
+
+**Example**:
+
+```rust
+use minichain_assembler::assemble;
+
+let source = r#"
+    .entry main
+    main:
+        LOADI R0, 42
+        HALT
+"#;
+
+let bytecode = assemble(source)?;
+```
+
+### assemble_with_ast
+
+```rust
+pub fn assemble_with_ast(source: &str) -> Result<(Program, Vec<u8>)>
+```
+
+Assemble source code and return both the parsed AST and compiled bytecode. Useful for debugging or when you need access to the program structure.
+
+<ParamField path="source" type="&str" required>
+  Assembly source code as a string
+</ParamField>
+
+<ResponseField name="Result" type="Result<(Program, Vec<u8>)>">
+  Tuple of (parsed program, compiled bytecode) or an error
+</ResponseField>
+
 ## Compiler API
 
 ### Compiler::new
