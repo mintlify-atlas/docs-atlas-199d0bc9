@@ -1,122 +1,145 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Minichain",
+  "theme": "aspen",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#7B61FF",
+    "light": "#9B84FF",
+    "dark": "#5B41DF"
   },
-  "favicon": "/favicon.svg",
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/jayendra-info/minichain"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/jayendra-info/minichain"
+    }
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
+              "introduction",
               "quickstart",
-              "development"
+              "installation"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Concepts",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "core-concepts/architecture",
+              "core-concepts/accounts-and-transactions",
+              "core-concepts/blocks-and-consensus",
+              "core-concepts/gas-system"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Virtual Machine",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "vm/overview",
+              "vm/registers-and-memory",
+              "vm/opcodes",
+              "vm/gas-metering",
+              "vm/execution-model"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Smart Contracts",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "smart-contracts/assembly-language",
+              "smart-contracts/writing-contracts",
+              "smart-contracts/deploying-contracts",
+              "smart-contracts/calling-contracts",
+              "smart-contracts/examples"
+            ]
+          },
+          {
+            "group": "CLI Usage",
+            "pages": [
+              "cli/overview",
+              "cli/initialization",
+              "cli/account-management",
+              "cli/transactions",
+              "cli/block-production",
+              "cli/contract-operations",
+              "cli/exploring"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/complete-workflow",
+              "guides/writing-first-contract",
+              "guides/debugging-contracts",
+              "guides/testing"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Core",
             "pages": [
-              "api-reference/introduction"
+              "api/core/hash",
+              "api/core/crypto",
+              "api/core/account",
+              "api/core/transaction",
+              "api/core/block",
+              "api/core/merkle"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Storage",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api/storage/database",
+              "api/storage/state",
+              "api/storage/chain"
+            ]
+          },
+          {
+            "group": "Virtual Machine",
+            "pages": [
+              "api/vm/executor",
+              "api/vm/opcodes-reference",
+              "api/vm/memory",
+              "api/vm/gas",
+              "api/vm/tracer"
+            ]
+          },
+          {
+            "group": "Assembler",
+            "pages": [
+              "api/assembler/lexer",
+              "api/assembler/parser",
+              "api/assembler/compiler"
+            ]
+          },
+          {
+            "group": "Consensus",
+            "pages": [
+              "api/consensus/poa",
+              "api/consensus/validator"
+            ]
+          },
+          {
+            "group": "Chain",
+            "pages": [
+              "api/chain/blockchain",
+              "api/chain/mempool",
+              "api/chain/executor"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    ]
   }
 }

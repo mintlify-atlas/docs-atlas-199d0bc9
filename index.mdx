@@ -1,97 +1,73 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Minichain"
+description: "Learn blockchain internals by building one from scratch in Rust"
 ---
 
-## Setting up
+<Note>
+  Minichain is an educational blockchain implementation designed for learning. It features a register-based VM, custom assembly language, and Proof of Authority consensus.
+</Note>
 
-Get your documentation site up and running in minutes.
+## What is Minichain?
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+Minichain is a complete, single-node, account-based blockchain built from scratch in Rust. It's designed as a learning project to understand blockchain internals by implementing every component yourself.
 
-## Make it yours
+### Key Features
 
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Register-based VM" icon="microchip">
+    16 registers with 40+ opcodes and gas metering
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Custom Assembly" icon="code">
+    Human-readable assembly language that compiles to bytecode
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Smart Contracts" icon="file-contract">
+    Deploy and execute bytecode contracts with storage
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Proof of Authority" icon="shield-check">
+    Round-robin block production with Ed25519 signatures
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## Quick Start
 
-Everything you need to create world-class documentation.
+Get up and running with Minichain in minutes.
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/installation">
+    Install Rust and build Minichain from source
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Initialize a blockchain and run your first contract
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+</CardGroup>
 
-## Need inspiration?
+## Core Components
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<CardGroup cols={3}>
+  <Card title="Architecture" icon="sitemap" href="/core-concepts/architecture">
+    Understand the modular crate structure
+  </Card>
+  <Card title="Virtual Machine" icon="server" href="/vm/overview">
+    Explore the register-based VM architecture
+  </Card>
+  <Card title="Smart Contracts" icon="scroll" href="/smart-contracts/assembly-language">
+    Write contracts in assembly language
+  </Card>
+</CardGroup>
+
+## Explore the Documentation
+
+<CardGroup cols={2}>
+  <Card title="Core Concepts" icon="book" href="/core-concepts/architecture">
+    Learn about accounts, transactions, blocks, and consensus
+  </Card>
+  <Card title="CLI Usage" icon="terminal" href="/cli/overview">
+    Master the command-line interface
+  </Card>
+  <Card title="Complete Workflow" icon="list-check" href="/guides/complete-workflow">
+    Follow an end-to-end example
+  </Card>
+  <Card title="API Reference" icon="code" href="/api/core/hash">
+    Explore the Rust API documentation
+  </Card>
+</CardGroup>
